@@ -1,0 +1,87 @@
+{
+  "name": "tg-super-eslint-config",
+  "version": "1.0.0",
+  "description": "A TypeScript-based shareable ESLint Flat Config for perfectionists.",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "typescript",
+    "vue",
+    "prettier",
+    "shareable-config",
+    "tg",
+    "tg-super-eslint-config",
+    "iamtiagogalvao"
+  ],
+  "author": {
+    "name": "Tiago M Galvão",
+    "url": "https://tiagogalvao.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamtiagogalvao/tg-super-eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iamtiagogalvao/tg-super-eslint-config/issues"
+  },
+  "homepage": "https://github.com/iamtiagogalvao/tg-super-eslint-config#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint ."
+  },
+  "peerDependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
+    "@intlify/eslint-plugin-vue-i18n": "^3.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-depend": "^0.12.0",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-sonarjs": "^0.20.0",
+    "eslint-plugin-unicorn": "^47.0.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0",
+    "vue-eslint-parser": "^9.0.0"
+  },
+  "devDependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
+    "@intlify/eslint-plugin-vue-i18n": "^3.2.0",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint-plugin-security": "^3",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-depend": "^0.12.0",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-sonarjs": "^3.0.1",
+    "eslint-plugin-unicorn": "^56.0.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "vue-eslint-parser": "^9.4.3"
+  },
+  "packageManager": "yarn@4.5.2",
+  "dependencies": {
+    "remove": "^0.1.5"
+  }
+}
