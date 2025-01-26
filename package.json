@@ -1,7 +1,7 @@
 {
   "name": "tg-super-eslint-config",
   "version": "1.0.0",
-  "description": "A TypeScript-based shareable ESLint Flat Config for perfectionists.",
+  "description": "A TypeScript-based ESLint Flat Config for perfectionists.",
   "keywords": [
     "eslint",
     "eslint-config",
@@ -80,8 +80,5 @@
     "typescript": "^5.7.3",
     "vue-eslint-parser": "^9.4.3"
   },
-  "packageManager": "yarn@4.5.2",
-  "dependencies": {
-    "remove": "^0.1.5"
-  }
+  "packageManager": "yarn@4.5.2"
 }
