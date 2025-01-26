@@ -20,7 +20,7 @@ Javascript Programmers that like to be in control and dislike a messy ESLint con
 > ⚠️ **Alert**  
 > This project is currently in active development.
 > Expect breaking changes as features are added and improvements are made.  
-> For detailed updates, check the [Changelog](./CHANGELOG.md).
+> For detailed updates, check the [Changelog](CHANGELOG.md).
 
 🚧 Thank you for your patience and contributions!
 
@@ -56,6 +56,15 @@ Javascript Programmers that like to be in control and dislike a messy ESLint con
      // You can also add your own rules, overrides, configs, plugins, etc here.
      // EXAMPLE: 'no-undef': 'off'
    ]
+   ```
+
+   Or if you are happy with the default config, you can just do:
+
+   ```js
+   // eslint.config.js
+   import tgSuperEslintConfig from "tg-super-eslint-config"
+
+   export default tgSuperEslintConfig()
    ```
 
 4. **Run ESLint or create your own script**:
@@ -98,7 +107,7 @@ I’m not the smartest person in the room (or on GitHub) 🤓, so if you see som
 
 ## License 📄
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE.md).
 
 ---
 
