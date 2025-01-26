@@ -1,0 +1,2 @@
+npm run github:typecheck && \
+npm run github:lint
