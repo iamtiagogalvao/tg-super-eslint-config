@@ -1,5 +1,15 @@
 
 # TG Super ESLint Config 🎉
+![Made with Love](https://img.shields.io/badge/Made%20with%20%E2%9D%A4-in%20Portugal-red)
+
+[![npm version](https://img.shields.io/npm/v/tg-super-eslint-config?color=blue)](https://www.npmjs.com/package/tg-super-eslint-config)
+[![license](https://img.shields.io/npm/l/tg-super-eslint-config)](LICENSE.md)
+[![downloads](https://img.shields.io/npm/dm/tg-super-eslint-config?color=purple)](https://www.npmjs.com/package/tg-super-eslint-config)
+[![Last Commit](https://img.shields.io/github/last-commit/iamtiagogalvao/tg-super-eslint-config?color=skyblue)](https://github.com/iamtiagogalvao/tg-super-eslint-config/commits)
+[![Package Size](https://img.shields.io/bundlephobia/minzip/tg-super-eslint-config)](https://bundlephobia.com/package/tg-super-eslint-config)
+
+[![GitHub stars](https://img.shields.io/github/stars/iamtiagogalvao/tg-super-eslint-config?color=yellow)](https://github.com/iamtiagogalvao/tg-super-eslint-config/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/iamtiagogalvao/tg-super-eslint-config?color=orange)](https://github.com/iamtiagogalvao/tg-super-eslint-config/network/members)
 
 A **TypeScript-based** plug-n-play ESLint Flat Config that enforces modern best practices for perfectionist
 Javascript Programmers that like to be in control and dislike a messy ESLint configuration.
@@ -35,7 +45,7 @@ Javascript Programmers that like to be in control and dislike a messy ESLint con
 2. **Install the peer dependencies**:
 
    ```bash
-   yarn add -D eslint typescript @eslint-community/eslint-plugin-eslint-comments @intlify/eslint-plugin-vue-i18n @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-config-prettier eslint-plugin-sonarjs eslint-plugin-unicorn eslint-plugin-depend eslint-plugin-vue prettier
+   yarn add -D eslint typescript @eslint-community/eslint-plugin-eslint-comments @intlify/eslint-plugin-vue-i18n @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-config-prettier eslint-plugin-sonarjs eslint-plugin-unicorn eslint-plugin-jsdoc eslint-plugin-depend eslint-plugin-vue prettier
    ```
 
 3. **Set up your ESLint configuration**:
@@ -49,12 +59,12 @@ Javascript Programmers that like to be in control and dislike a messy ESLint con
    export default [
      ...tgSuperEslintConfig({
        useVue: true, // DEFAULT: False - Set to true if you are using vue
-       useGlobalRulesWithVue: true // DEFAULT: False - Set to true if you want to use all other configs in vue projects too
+       useGlobalRulesWithVue: true, // DEFAULT: False - Set to true if you want to use all other configs in vue projects too
        vueI18nDir: "./src/locales" // DEFAULT: undefined - Pass the path to your i18n locales if you want additional locale linting
      })
 
      // You can also add your own rules, overrides, configs, plugins, etc here.
-     // EXAMPLE: 'no-undef': 'off'
+     // EXAMPLE: {rules: 'no-undef': 'off'}
    ]
    ```
 
