@@ -6,7 +6,7 @@ import { tgIgnores } from './ignores.js'
 import globals from 'globals'
 import { tgPlugins } from './plugins.js'
 import { tgRuleList } from './rules.js'
-import { tgSuperEslintConfigOptions } from '../interfaces/index.js'
+import { TgSuperEslintConfigOptions } from '../interfaces/index.js'
 import { NO_CONFIG } from '../utils/globals.js'
 
 /**
@@ -21,10 +21,10 @@ const vueRuleOverrides = {
 
 /**
  * Generated Vue Config based on the options passed.
- * @param {tgSuperEslintConfigOptions} options - The options object.
+ * @param {TgSuperEslintConfigOptions} options - The options object.
  * @returns - The vue config object.
  */
-const tgVueConfig = (options: tgSuperEslintConfigOptions) => {
+const tgVueConfig = (options: TgSuperEslintConfigOptions) => {
   if (!options.useVue) {
     return NO_CONFIG
   }

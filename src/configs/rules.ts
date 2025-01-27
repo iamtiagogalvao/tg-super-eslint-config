@@ -8,16 +8,16 @@ import * as dependencyPlugin from 'eslint-plugin-depend'
  */
 export const tgRuleList = {
   // =======================[ Typescript ]=======================
-  ...(tsEslintPlugin.configs.recommended?.rules ?? {}),
+  ...tsEslintPlugin.configs.recommended?.rules,
 
   // =======================[ Sonar JS ]=======================
-  ...(sonarjsPlugin.configs.recommended?.rules ?? {}),
+  ...sonarjsPlugin.configs.recommended?.rules,
 
   // =======================[ Unicorn ]=======================
-  ...(unicornPlugin.configs.recommended.rules ?? {}),
+  ...unicornPlugin.configs.recommended.rules,
 
   // =======================[ Dependency Plugin ]=======================
-  ...(dependencyPlugin.configs.recommended.rules ?? {}),
+  ...dependencyPlugin.configs.recommended.rules,
 
   // =======================[ Code Quality / Style ]=======================
 
