@@ -21,7 +21,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamtiagogalvao/tg-super-eslint-config.git"
+    "url": "git+https://github.com/iamtiagogalvao/tg-super-eslint-config.git"
   },
   "bugs": {
     "url": "https://github.com/iamtiagogalvao/tg-super-eslint-config/issues"
@@ -43,8 +43,21 @@
   "scripts": {
     "build-prod": "tsc",
     "github:typecheck": "tsc --noEmit",
-    "github:lint": "eslint .",
-    "release": "standard-version",
+    "github:lint": "eslint src",
+    "prepare-release": "yarn github:lint && yarn github:typecheck && yarn build-prod",
+    "release:branch": "node scripts/create-release-branch.js",
+    "release:patch": "yarn prepare-release && yarn release:branch patch && standard-version --release-as patch",
+    "release:minor": "yarn prepare-release && yarn release:branch minor && standard-version --release-as minor",
+    "release:major": "yarn prepare-release && yarn release:branch major && standard-version --release-as major",
+    "publish-package": "npm publish",
+    "release:patch-publish": "yarn release:patch && yarn publish-package",
+    "release:minor-publish": "yarn release:minor && yarn publish-package",
+    "release:major-publish": "yarn release:major && yarn publish-package",
+    "git:push-release": "git push --follow-tags --set-upstream origin $(git rev-parse --abbrev-ref HEAD)",
+    "release:dry-run": "yarn prepare-release && yarn dry-run:branch && yarn dry-run:version && yarn dry-run:publish",
+    "dry-run:branch": "DRY_RUN=true node scripts/create-release-branch.js patch",
+    "dry-run:version": "standard-version --dry-run --release-as patch",
+    "dry-run:publish": "npm publish --dry-run",
     "prepare": "husky",
     "commit": "cz"
   },

@@ -11,8 +11,13 @@ import tsParser from '@typescript-eslint/parser'
 
 export default [
   // =======================[ Global ]=======================
+
   {
-    ignores: ['node_modules', 'dist'],
+    files: ['src/**/*.{js,ts,jsx,tsx}'],
+    ignores: ['node_modules', 'dist']
+  },
+
+  {
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -40,6 +45,12 @@ export default [
 
   // =======================[ JSDoc ]=======================
   eslintPluginJsdoc.configs['flat/recommended-typescript'],
+
+  {
+    rules: {
+      'jsdoc/no-types': 'off'
+  }
+  },
 
   // =======================[ Dependencies ]=======================
   eslintPluginDepend.configs['flat/recommended'],

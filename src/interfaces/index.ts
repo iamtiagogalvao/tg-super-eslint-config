@@ -1,10 +1,10 @@
 /**
  * Interface for configurations options of the tg-super-eslint-config.
  */
-interface tgSuperEslintConfigOptions {
+interface TgSuperEslintConfigOptions {
   useVue?: boolean
   useGlobalRulesWithVue?: boolean
   vueI18nDir?: string
 }
 
-export { tgSuperEslintConfigOptions }
+export { TgSuperEslintConfigOptions }

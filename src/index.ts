@@ -3,7 +3,7 @@
 |  © 2025 Tiago M Galvão  |  https://tiagogalvao.com |
 *---------------------------------------------------*/
 
-import { tgSuperEslintConfigOptions } from './interfaces/index.js'
+import { TgSuperEslintConfigOptions } from './interfaces/index.js'
 import { tgPrettierConfig } from './configs/prettier-config.js'
 import { tgVueConfig } from './configs/vue-config.js'
 import { tgPlugins } from './configs/plugins.js'
@@ -11,7 +11,12 @@ import { tgRuleList } from './configs/rules.js'
 import { tgLanguageOptions } from './configs/language-options.js'
 import { tgIgnores } from './configs/ignores.js'
 
-export function tgSuperEslintConfig(options: tgSuperEslintConfigOptions = {}) {
+/**
+ * The super eslint config.
+ * @param {TgSuperEslintConfigOptions} options - The options object.
+ * @returns - The super eslint config.
+ */
+export function tgSuperEslintConfig(options: TgSuperEslintConfigOptions = {}) {
   return [
     // =======================[ MAIN CONFIG ]=======================
 
