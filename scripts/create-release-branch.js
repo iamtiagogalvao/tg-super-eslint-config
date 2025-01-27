@@ -25,7 +25,7 @@ async function createReleaseBranch() {
     }
 
     const version = versionMatch[1]
-    const branchName = `release-${version}-${versionType}`
+    const branchName = `release/${version}-${versionType}`
 
     if (isDryRun) {
       console.log(`[DRY RUN] Would create and switch to branch: ${branchName}`)
